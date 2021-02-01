@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+html {
+  font-size: 14px;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: #0c122c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* background */
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.mobile {
+  display: none;
+  top: 0;
+}
+/* background ends here */
+
+.main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  z-index: +1;
+}
+
+/* left portion */
+.left-portion {
+  width: 350px;
+  height: 200px;
+  background-color: #1e2c69;
+  padding: 30px;
+  border-radius: 10px 100px 10px 10px;
+}
+.left-portion .icons {
+  margin-top: 30px;
+}
+.left-portion .icons img {
+  background-color: #0c122c;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.left-portion .icons img:nth-child(1) {
+  padding: 10px 13px;
+}
+.left-portion .icons img:nth-child(2) {
+  padding: 12px 10px;
+}
+.left-portion .icons img:nth-child(3) {
+  padding: 14px 10px;
+}
+/* left portion ends here */
+
+/* right portion */
+.right-portion {
+  width: 500px;
+  height: 150px;
+  background-color: #1e2c69;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.851);
+  padding: 30px;
+  position: relative;
+}
+.right-portion h1 {
+  position: absolute;
+  top: -40px;
+  right: 40px;
+  background-color: white;
+  color: #00000e;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.right-portion h1 span {
+  color: #86878c;
+  font-size: 10px;
+}
+.right-portion h1::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -7px;
+  right: 10px;
+}
+.floating,
+span {
+  font-weight: bold;
+}
+
+/* graph */
+.graph-container {
+  width: 100%;
+  height: 18px;
+  background-color: #151e48;
+  border-radius: 30px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.graph-body {
+  margin-left: 3px;
+  width: 70%;
+  height: 10px;
+  background-image: linear-gradient(to right, #fe9b92, #fb4d92);
+  border-radius: 30px;
+  position: relative;
+}
+.graph-body::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  top: 0.5px;
+  right: 1px;
+  border-radius: 50%;
+}
+
+.rang {
+  display: flex;
+  justify-content: space-between;
+}
+/* right portion ends here*/
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+/* attribution ends here */
+
+/* responsive */
+@media only screen and (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .right-portion {
+    width: 350px;
+  }
+  .right-portion h1::after {
+    display: none;
+  }
+  .right-portion h1 {
+    top: 120px;
+    right: 110px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
+  }
+  .container {
+    background-color: #0f1b3d;
+  }
+}
